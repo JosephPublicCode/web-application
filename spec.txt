@@ -1,0 +1,4 @@
+The purpose of this application is to allow users to log topics they are interested in and make journal entries. 
+This site will be called learning logs. The Learning log home page will describe the site and invite users to either register or log in. 
+Once logged in a user can: create a new topic, create a new entry, read an existing entry and edit an existing entry. 
+
