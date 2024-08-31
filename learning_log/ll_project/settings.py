@@ -40,7 +40,12 @@ INSTALLED_APPS = [
     # My apps
     'learning_logs', 
     'accounts',
+    # Third Party Apps
+    'django_bootstrap5',
 ]
+
+
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -126,3 +131,8 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGIN_REDIRECT_URL = 'learning_logs:index'
+
+LOGOUT_REDIRECT_URL = 'learning_logs:index'
+
+LOGIN_URL = 'accounts:login'
+
