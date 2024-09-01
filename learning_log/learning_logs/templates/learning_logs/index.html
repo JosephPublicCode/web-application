@@ -1,5 +1,25 @@
-{% extends 'learning_logs/base.html' % }
+{% extends 'learning_logs/base.html' %}
 
-{% block content %}
-<p>Learning log helps you keep track of your leanring, for any topic you are interested in. </p>
-{% endblock content %}
+{% block page_header %}
+
+<div class="p-3 mb-4 bg-light border rounded-3">
+    <div class="container-fluid py-4"> 
+        <h1 class="display-3">
+            Track your learning.
+        </h1>
+
+        <p class="lead">
+            Document your journey of learning with learning logs. Create your topics and document your learning. Whenever you learn something new, document it with new entries. 
+        </p>
+        {% if user.is_authenticated %}
+        <a class=""btn btn-primary btn-lg mt-1" href="{% url 'learning_logs:topics' %}">
+            Topics &raquo;
+        </a>
+        {% else %}
+        <a class=""btn btn-primary btn-lg mt-1" href="{% url 'accounts:register' %}">
+            Register &raquo;
+        </a>
+        {% endif %} 
+    </div>
+</div>
+{% endblock page_header %}
