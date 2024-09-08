@@ -1,8 +1,9 @@
 <!doctype html> 
-<html lang=""en> 
+<html lang="en"> 
 <head>
     <meta charset="utf-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <link rel="'stylesheet" type="'text/css" href=""styles.css/>
     <title>
         Learning Logs
     </title>
@@ -13,7 +14,7 @@
 
 </head>
 
-<body>
+<body data-bs-theme="light">
     <nav class="navbar navbar-expand-md navbar-light bg-light mb-4 border"> 
         <div class="container-fluid"> 
             <a class="navbar-brand" href="{% url 'learning_logs:index' %}">
@@ -35,6 +36,11 @@
                     </li>
                 </ul> <!-- end of links on the left side of the navbar -->
                 <ul class="navbar-nav ms-auto mb-2 mb-md-0"> 
+                    <li class="nav-item">
+                    <input type='checkbox' id="darkmode-toggle"/>
+                    <label for="darkmode-toggle"></label>
+
+                    </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item">
                         <span class="navbar-text me-2">
@@ -78,7 +84,6 @@
             {% block content %}{% endblock content %}
         </div>
     </main>
-
 
 
 </body>
